@@ -3,14 +3,42 @@
                         version="0.3.1" id="ows-context-ex-1-v3">
   <ows-context:General>
     <ows:BoundingBox crs="EPSG:3857">
-      <ows:LowerCorner>-8604130.477526832 -320097.07393612247</ows:LowerCorner>
-      <ows:UpperCorner>8948257.201654762 8720263.135408245</ows:UpperCorner>
+      <ows:LowerCorner>983813.3 6154787.4</ows:LowerCorner>
+      <ows:UpperCorner>830008.1 6044259.2</ows:UpperCorner>
     </ows:BoundingBox>
   </ows-context:General>
   <ows-context:ResourceList>
-    <ows-context:Layer name="{type=osm}"
+<!--
+    <ows-context:Layer name="{type=Feature,name=CFB001}"
                        group="Background layers"
                        hidden="false"
+                       opacity="1">
+      <ows-context:Server service="urn:ogc:serviceType:FeatureCollection">
+        <ows-context:OnlineResource xlink:href="https://umap.openstreetmap.fr/en/datalayer/644789/" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      </ows-context:Server>
+      <ows:Title>ConFoBi Plots</ows:Title>
+    </ows-context:Layer>
+
+    <ows-context:Layer name="{type=stamen,name=terrain}"
+                       group="Background layers"
+                       hidden="true"
+                       opacity="1">
+      <ows:Title>Stamen Terrain</ows:Title>
+    </ows-context:Layer>
+-->
+    <ows-context:Layer name="type=tms,name=opentopomap"
+                       group="Background layers"
+                       hidden="false"
+                       opacity="1">
+      <ows:Title>OpenTopoMap</ows:Title>
+      <ows-context:Server service="urn:ogc:serviceType:WMTS">
+        <ows-context:OnlineResource xlink:href=" https://c.tile.opentopomap.org/{z}/{x}/{y}.png " xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      </ows-context:Server>
+    </ows-context:Layer>
+
+    <ows-context:Layer name="{type=osm}"
+                       group="Background layers"
+                       hidden="true"
                        opacity="1">
       <ows:Title>OpenStreetMap
       </ows:Title>
@@ -23,25 +51,23 @@
                        hidden="false"
                        opacity="1">
       <ows:Title>Bing Aerial</ows:Title>
-    </ows-context:Layer> -->
+    </ows-context:Layer> 
     <ows-context:Layer name="{type=stamen,name=watercolor}"
                        group="Background layers"
                        hidden="true"
                        opacity="1">
       <ows:Title>Stamen Watercolor</ows:Title>
     </ows-context:Layer>
+
+
+
     <ows-context:Layer name="{type=stamen,name=toner}"
                        group="Background layers"
                        hidden="true"
                        opacity="1">
       <ows:Title>Stamen Toner</ows:Title>
     </ows-context:Layer>
-    <ows-context:Layer name="{type=stamen,name=terrain}"
-                       group="Background layers"
-                       hidden="true"
-                       opacity="1">
-      <ows:Title>Stamen Terrain</ows:Title>
-    </ows-context:Layer>
+-->
 
     <!--
     Example for TMS:
